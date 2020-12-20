@@ -1,5 +1,202 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2020-12-20T14:44:23+08:00</updated><id>/feed.xml</id><title type="html">jc_space</title><subtitle>A stupid blog built by an idiot named jc
-</subtitle><author><name>Jiang Chen</name></author><entry><title type="html">Welcome</title><link href="/2018/07/01/welcome.html" rel="alternate" type="text/html" title="Welcome" /><published>2018-07-01T00:00:00+08:00</published><updated>2018-07-01T00:00:00+08:00</updated><id>/2018/07/01/welcome</id><content type="html" xml:base="/2018/07/01/welcome.html">&lt;p&gt;If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2020-12-20T19:43:35+08:00</updated><id>/feed.xml</id><title type="html">jc_space</title><subtitle>A stupid blog built by an idiot named jc
+</subtitle><author><name>Jiang Chen</name></author><entry><title type="html">六大原则</title><link href="/2020/12/20/%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99.html" rel="alternate" type="text/html" title="六大原则" /><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><id>/2020/12/20/%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99</id><content type="html" xml:base="/2020/12/20/%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99.html">&lt;h2 id=&quot;1单一职责原则srpsingle-responsibility-principle-&quot;&gt;1.单一职责原则(SRP,Single Responsibility Principle )&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There should never be more than one reason for a class to change.&lt;/p&gt;
+
+  &lt;p&gt;一个类应该专注于做一件事且仅有一个引起变化的原因。
+即一个类应该只有一个职责。&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;优点：
+      &lt;ul&gt;
+        &lt;li&gt;降低类的复杂性&lt;/li&gt;
+        &lt;li&gt;提高类的可读性&lt;/li&gt;
+        &lt;li&gt;提高代码的可维护性和复用性&lt;/li&gt;
+        &lt;li&gt;降低因变更引起的风险&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;应用&lt;br /&gt;
+Java EE中的分层框架。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;2里氏替换原则lspliskov-substitution-principle&quot;&gt;2.里氏替换原则(LSP,Liskov Substitution Principle)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If for each object o1 of type S is an object  o2 of type T such that for all programs P defined in items of S, the behavior of P is unchanged when o1 is substituted for o2 then T is subtype of S.&lt;/p&gt;
+
+  &lt;p&gt;Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it .&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;里氏替换原则为良好的继承定义了一个规范：
+    &lt;ul&gt;
+      &lt;li&gt;子类必须完全实现父类的方法。&lt;/li&gt;
+      &lt;li&gt;子类可以有自己的个性。&lt;/li&gt;
+      &lt;li&gt;子类覆盖或实现父类的方法时输入参数可以被放大。&lt;/li&gt;
+      &lt;li&gt;子类覆盖或实现父类的方法时的输出结果可以被缩小。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;体现里氏替换原则的设计模式有：
+    &lt;ul&gt;
+      &lt;li&gt;策略模式&lt;/li&gt;
+      &lt;li&gt;组合模式&lt;/li&gt;
+      &lt;li&gt;代理模式&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;应用
+    &lt;ul&gt;
+      &lt;li&gt;Java编译器在编译时会检查程序是否符合里氏替换原则。
+        &lt;h2 id=&quot;3依赖倒置原则dipdependence-inversion-principle&quot;&gt;3.依赖倒置原则(DIP,Dependence Inversion Principle)&lt;/h2&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;High level modules should not depend upon low modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depends upon abstractions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;高层模块不应该依赖底层模块，两者都依赖其抽象。&lt;br /&gt;
+抽象不依赖细节。&lt;br /&gt;
+细节不依赖于抽象。&lt;br /&gt;
+依赖倒置原则在Java中的表现：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;模块间的依赖通过抽象产生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的。&lt;/li&gt;
+  &lt;li&gt;接口或抽象类不依赖于实现类，实现类依赖于接口或抽象类&lt;br /&gt;
+更加精确的定义就是“面向接口编程”。
+优点：&lt;/li&gt;
+  &lt;li&gt;减少类间的耦合性&lt;/li&gt;
+  &lt;li&gt;提高系统的稳定性&lt;/li&gt;
+  &lt;li&gt;降低并行开发引起的风险&lt;/li&gt;
+  &lt;li&gt;提高代码的可读性和可维护性&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4接口隔离原则ispinterface-segregation-principle&quot;&gt;4.接口隔离原则(ISP,Interface Segregation Principle)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Clients should not be forced to depend upon interfaces that they dont’t use.
+客户端不应该依赖它不需要的接口。
+The dependency of one class to another one should depend on the smallest possible interface.
+类之间的依赖关系应该建立在最小的接口上。&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;一个类对另一个类的依赖性应当是建立在最小的接口上的。&lt;/li&gt;
+    &lt;li&gt;一个接口代表一个角色，不应该将不同的角色都交给一个接口，没有关系的接口合并在一起，形成一个臃肿的大接口，是对角色和接口的污染，使用多个专门的接口优于使用单一的总接口。&lt;/li&gt;
+    &lt;li&gt;不应该强迫客户依赖于他们不用的方法。接口属于客户，不属于它所在的类层次结构。即不要强迫客户使用他们不用的方法，否则这些客户就会面临由于这些不使用的方法改变所带来的问题。
+应用场合：只提供调用着需要的方法，屏蔽不需要的方法，类如系统用户不同角色分配不同权限的功能。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;5迪米特法则lodlaw-of-demeter&quot;&gt;5.迪米特法则(LoD,Law of Demeter)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Only talk to your immediate friends.  只与你直接的朋友们通信。
+不要跟“陌生人”说话
+每一个软件单位对其他的单位都只有最少的了解，这些了解仅限于那些与本单位密切相关的软件单位。
+如果两个类不必彼此直接通信，那么这两个类就不应当发生直接相互作用，如果一个类需要调用另一个类的某一个方法，可以通过第三者转发这个调用。
+核心观念：类之间的解耦、弱耦合，提高类的复用率。
+设计模式应用：&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;外观模式&lt;/li&gt;
+    &lt;li&gt;中介者模式&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;6开闭原则ocpopen-closed-principle&quot;&gt;6.开闭原则(OCP,Open-Closed Principle)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Software entities should be open for extension, but closed for modification.软件实体应当对扩展开放，对修改关闭。&lt;br /&gt;
+在设计模块时，应当使这个模块可以在不被修改的前提下被扩展，即可以在不修改源码的情况下改变模块的行为。&lt;br /&gt;
+开闭原则是最基础的原则，其他原则都是开闭原则的手段和工具。
+优点：&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;提高复用性&lt;/li&gt;
+    &lt;li&gt;提高可维护性&lt;/li&gt;
+    &lt;li&gt;提高灵活性&lt;/li&gt;
+    &lt;li&gt;易于测试&lt;br /&gt;
+&lt;strong&gt;开闭原则是面向对象设计的终极目标。&lt;/strong&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;</content><author><name>Jiang Chen</name></author><category term="设计模式" /><summary type="html">1.单一职责原则(SRP,Single Responsibility Principle ) There should never be more than one reason for a class to change. 一个类应该专注于做一件事且仅有一个引起变化的原因。 即一个类应该只有一个职责。 优点： 降低类的复杂性 提高类的可读性 提高代码的可维护性和复用性 降低因变更引起的风险 应用 Java EE中的分层框架。 2.里氏替换原则(LSP,Liskov Substitution Principle) If for each object o1 of type S is an object o2 of type T such that for all programs P defined in items of S, the behavior of P is unchanged when o1 is substituted for o2 then T is subtype of S. Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it . 里氏替换原则为良好的继承定义了一个规范： 子类必须完全实现父类的方法。 子类可以有自己的个性。 子类覆盖或实现父类的方法时输入参数可以被放大。 子类覆盖或实现父类的方法时的输出结果可以被缩小。 体现里氏替换原则的设计模式有： 策略模式 组合模式 代理模式 应用 Java编译器在编译时会检查程序是否符合里氏替换原则。 3.依赖倒置原则(DIP,Dependence Inversion Principle) High level modules should not depend upon low modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depends upon abstractions. 高层模块不应该依赖底层模块，两者都依赖其抽象。 抽象不依赖细节。 细节不依赖于抽象。 依赖倒置原则在Java中的表现： 模块间的依赖通过抽象产生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的。 接口或抽象类不依赖于实现类，实现类依赖于接口或抽象类 更加精确的定义就是“面向接口编程”。 优点： 减少类间的耦合性 提高系统的稳定性 降低并行开发引起的风险 提高代码的可读性和可维护性 4.接口隔离原则(ISP,Interface Segregation Principle) Clients should not be forced to depend upon interfaces that they dont’t use. 客户端不应该依赖它不需要的接口。 The dependency of one class to another one should depend on the smallest possible interface. 类之间的依赖关系应该建立在最小的接口上。 一个类对另一个类的依赖性应当是建立在最小的接口上的。 一个接口代表一个角色，不应该将不同的角色都交给一个接口，没有关系的接口合并在一起，形成一个臃肿的大接口，是对角色和接口的污染，使用多个专门的接口优于使用单一的总接口。 不应该强迫客户依赖于他们不用的方法。接口属于客户，不属于它所在的类层次结构。即不要强迫客户使用他们不用的方法，否则这些客户就会面临由于这些不使用的方法改变所带来的问题。 应用场合：只提供调用着需要的方法，屏蔽不需要的方法，类如系统用户不同角色分配不同权限的功能。 5.迪米特法则(LoD,Law of Demeter) Only talk to your immediate friends. 只与你直接的朋友们通信。 不要跟“陌生人”说话 每一个软件单位对其他的单位都只有最少的了解，这些了解仅限于那些与本单位密切相关的软件单位。 如果两个类不必彼此直接通信，那么这两个类就不应当发生直接相互作用，如果一个类需要调用另一个类的某一个方法，可以通过第三者转发这个调用。 核心观念：类之间的解耦、弱耦合，提高类的复用率。 设计模式应用： 外观模式 中介者模式 6.开闭原则(OCP,Open-Closed Principle) Software entities should be open for extension, but closed for modification.软件实体应当对扩展开放，对修改关闭。 在设计模块时，应当使这个模块可以在不被修改的前提下被扩展，即可以在不修改源码的情况下改变模块的行为。 开闭原则是最基础的原则，其他原则都是开闭原则的手段和工具。 优点： 提高复用性 提高可维护性 提高灵活性 易于测试 开闭原则是面向对象设计的终极目标。</summary></entry><entry><title type="html">创建型模式</title><link href="/2020/12/20/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F.html" rel="alternate" type="text/html" title="创建型模式" /><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><id>/2020/12/20/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F</id><content type="html" xml:base="/2020/12/20/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F.html">&lt;p&gt;创建型模式是用来创建对象的模式，抽象了实例化的过程，帮助系统独立于其关联对象的创建、组合和表示方式。&lt;br /&gt;
+两个主要功能：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;封装系统使用的具体类的信息&lt;/li&gt;
+  &lt;li&gt;隐藏类的实例是如何被创建和组织的，外界只知道这些对象的接口而不清楚具体实现细节。
+作用：&lt;/li&gt;
+  &lt;li&gt;封装创建逻辑。&lt;/li&gt;
+  &lt;li&gt;封装创建逻辑的变化&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;创建型模式共有5种&quot;&gt;创建型模式共有5种：&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;单例模式&lt;/li&gt;
+  &lt;li&gt;工厂方法模式&lt;/li&gt;
+  &lt;li&gt;抽象工厂模式&lt;/li&gt;
+  &lt;li&gt;建造者模式&lt;/li&gt;
+  &lt;li&gt;原型模式
+    &lt;h2 id=&quot;单例模式&quot;&gt;单例模式&lt;/h2&gt;
+    &lt;h3 id=&quot;定义&quot;&gt;定义&lt;/h3&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; - Ensure a class has only one instance,and provide a global point of access to it. 
+ - 确保一个类只有一个实例，而且自行实例化并向整个系统提供这个实例   ###  饿汉式单例类   ```java public class Singleton{  private static Singleton m_instance = new Singleton();  //构造方法私有化  private Singleton(){
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;}
+ //通过公共方法获得实例对象
+ public static Singleton getInstance(){
+     return m_instance;
+ }
+}&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;### 懒汉式单例类  
+```java
+public class Singleton{
+ private static Singleton n_instance = null;
+ //构造方法私有化
+ private Singleton(){
+
+ }
+ //通过公共方法获得实例对象
+ synchronized public static Singleton getInstance(){
+     if(n_instance == null){
+         n_instance = new Singleton();
+     }
+     return n_instance;
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h3 id=&quot;两个大汉的区别&quot;&gt;两个“大汉”的区别&lt;/h3&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   - 饿汉式单例类在被加载时实例化，懒汉式单例类在第一次被引用时实例化
+   - 资源利用上方面，饿汉式比懒汉式要差一些，从速度和反应时间上看，饿汉式比懒汉式稍好。
+   - 饿汉式可以在Java中实现但不易在C++内实现。？ ## 工厂方法模式   ## 抽象工厂模式   ## 建造者模式   ## 原型模式  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jiang Chen</name></author><category term="设计模式" /><summary type="html">创建型模式是用来创建对象的模式，抽象了实例化的过程，帮助系统独立于其关联对象的创建、组合和表示方式。 两个主要功能： 封装系统使用的具体类的信息 隐藏类的实例是如何被创建和组织的，外界只知道这些对象的接口而不清楚具体实现细节。 作用： 封装创建逻辑。 封装创建逻辑的变化 创建型模式共有5种： 单例模式 工厂方法模式 抽象工厂模式 建造者模式 原型模式 单例模式 定义 - Ensure a class has only one instance,and provide a global point of access to it. - 确保一个类只有一个实例，而且自行实例化并向整个系统提供这个实例 ### 饿汉式单例类 ```java public class Singleton{ private static Singleton m_instance = new Singleton(); //构造方法私有化 private Singleton(){ } //通过公共方法获得实例对象 public static Singleton getInstance(){ return m_instance; } } ### 懒汉式单例类 ```java public class Singleton{ private static Singleton n_instance = null; //构造方法私有化 private Singleton(){ } //通过公共方法获得实例对象 synchronized public static Singleton getInstance(){ if(n_instance == null){ n_instance = new Singleton(); } return n_instance; } } 两个“大汉”的区别 - 饿汉式单例类在被加载时实例化，懒汉式单例类在第一次被引用时实例化 - 资源利用上方面，饿汉式比懒汉式要差一些，从速度和反应时间上看，饿汉式比懒汉式稍好。 - 饿汉式可以在Java中实现但不易在C++内实现。？ ## 工厂方法模式 ## 抽象工厂模式 ## 建造者模式 ## 原型模式</summary></entry><entry><title type="html">结构型模式</title><link href="/2020/12/20/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F.html" rel="alternate" type="text/html" title="结构型模式" /><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><id>/2020/12/20/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F</id><content type="html" xml:base="/2020/12/20/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F.html">&lt;p&gt;结构型模式描述如何将类或对象结合在一起形成更大的结构，通过组合类或对象产生更大的结构以适应更高层次的逻辑需求。 &lt;br /&gt;
+分7种：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;代理模式&lt;/li&gt;
+  &lt;li&gt;装饰模式&lt;/li&gt;
+  &lt;li&gt;适配器模式&lt;/li&gt;
+  &lt;li&gt;组合模式&lt;/li&gt;
+  &lt;li&gt;桥梁模式&lt;/li&gt;
+  &lt;li&gt;外观模式&lt;/li&gt;
+  &lt;li&gt;享元模式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;todo&lt;/strong&gt;&lt;/p&gt;</content><author><name>Jiang Chen</name></author><category term="设计模式" /><summary type="html">结构型模式描述如何将类或对象结合在一起形成更大的结构，通过组合类或对象产生更大的结构以适应更高层次的逻辑需求。 分7种： 代理模式 装饰模式 适配器模式 组合模式 桥梁模式 外观模式 享元模式 todo</summary></entry><entry><title type="html">行为型模式</title><link href="/2020/12/20/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F.html" rel="alternate" type="text/html" title="行为型模式" /><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><id>/2020/12/20/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F</id><content type="html" xml:base="/2020/12/20/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F.html">&lt;p&gt;行为型模式是对不同对象之间划分责任和算法的抽象化。&lt;br /&gt;
+分11种：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;模板方法模式&lt;/li&gt;
+  &lt;li&gt;命令模式&lt;/li&gt;
+  &lt;li&gt;责任链模式&lt;/li&gt;
+  &lt;li&gt;策略模式&lt;/li&gt;
+  &lt;li&gt;迭代器模式&lt;/li&gt;
+  &lt;li&gt;中介者模式&lt;/li&gt;
+  &lt;li&gt;观察者模式&lt;/li&gt;
+  &lt;li&gt;备忘录模式&lt;/li&gt;
+  &lt;li&gt;访问者模式&lt;/li&gt;
+  &lt;li&gt;状态模式&lt;/li&gt;
+  &lt;li&gt;解释器模式&lt;br /&gt;
+&lt;strong&gt;todo&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jiang Chen</name></author><category term="设计模式" /><summary type="html">行为型模式是对不同对象之间划分责任和算法的抽象化。 分11种： 模板方法模式 命令模式 责任链模式 策略模式 迭代器模式 中介者模式 观察者模式 备忘录模式 访问者模式 状态模式 解释器模式 todo</summary></entry><entry><title type="html">Welcome</title><link href="/2018/07/01/welcome.html" rel="alternate" type="text/html" title="Welcome" /><published>2018-07-01T00:00:00+08:00</published><updated>2018-07-01T00:00:00+08:00</updated><id>/2018/07/01/welcome</id><content type="html" xml:base="/2018/07/01/welcome.html">&lt;p&gt;If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:&lt;/p&gt;
 
 &lt;p&gt;You may want to &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration&quot;&gt;config the site&lt;/a&gt; or &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts&quot;&gt;writing a post&lt;/a&gt; next. Please feel free to &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/issues&quot;&gt;create an issue&lt;/a&gt; or &lt;a href=&quot;mailto:kitian616@outlook.com&quot;&gt;send me email&lt;/a&gt; if you have any questions.&lt;/p&gt;
 
